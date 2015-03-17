@@ -14,7 +14,7 @@ public class E4_9 {
 		String name = input.next();
 		int score = input.nextInt();
 		
-		if (score > score1)
+		if (score > score0)
 		{
 			name1 = name0;
 			score1 = score0;
