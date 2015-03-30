@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-
 public class E2_13 {
 	public static void main(String[] args) {
 	
@@ -12,14 +10,14 @@ public class E2_13 {
 		
 		
 		System.out.print("Enter monthly interest rate:");
-		double annuallyInterestRate = input.nextDouble();
+		double monthlyInterestRate = input.nextDouble();
+		double annuallyInterestRate= monthlyInterestRate / 12;
 		
 
 		System.out.print("Enter number of years:");
 		int years = input.nextInt();
 		
-		double futureInvestmentValue = investmentAmount * Math.pow((1 + annuallyInterestRate / 100.0 ) , years);
-		System.out.println("Accumulated value is " + (int)(futureInvestmentValue * 100) / 100.0);
-
+		double futureInvestmentValue = investmentAmount * Math.pow((1 + annuallyInterestRate / 100.0 ) , years * 12);
+		System.out.printf("%2.2f",futureInvestmentValue);
 	}
 }
